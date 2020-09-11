@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Pick Your Goals</h1>
+    <div class="oneFifth">
+        <h3>Education Goals</h3>
+        <div th:each="goals : ${education}">
+            <input name="goals" type="checkbox" th:value="${goal.id}"/>
+            <span th:text="${goal.name}">GOAL</span><br/>
+        </div>
+    </div>
+    <div class="oneFifth">
+        <h3>Health Goals</h3>
+        <div th:each="goals : ${health}">
+            <input name="goals" type="checkbox" th:value="${goal.id}"/>
+            <span th:text="${goal.name}">GOAL</span><br/>
+        </div>
+    </div>
+    <div class="oneFifth">
+        <h3>Social Goals</h3>
+        <div th:each="goals : ${social}">
+            <input name="goals" type="checkbox" th:value="${goal.id}"/>
+            <span th:text="${goal.name}">GOAL</span><br/>
+        </div>
+    </div>
+    <div class="oneFifth" >
+        <h3>Career Goals</h3>
+        <div th:each="goals : ${career}">
+            <input name="goals" type="checkbox" th:value="${goal.id}"/>
+            <span th:text="${goal.name}">GOAL</span><br/>
+        </div>
+    </div>
+    <div class="oneFifth">
+        <h3>Hobby Goals</h3>
+        <div th:each="goals : ${hobby}">
+            <input name="goals" type="checkbox" th:value="${goal.id}"/>
+            <span th:text="${goal.name}">GOAL</span><br/>
+        </div>
+    </div>
+    <link th:href="@{/static/style2.css}" href="/static/style.css" rel="stylesheet" type="text/css" media="screen" id="NewYears"/>
+</body>
+<footer>
+    <div>Copyright @2020 Pedro Moreno CS-321-1</div>
+</footer>
+</html>
